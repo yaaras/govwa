@@ -86,18 +86,3 @@ GoVWA users:
 | aqua  | aqua       |
 
 Explore the vulnerability.
-
-#### Contributor
----
-* Khaedir (golang programming)
-* Xaquille (web design)
-
-#### To Do
-
-* add more vulnerabilities
-* ~~XXE Vulnerability~~
-* NoSQLInjection
-* JSON Web API (unprotected API)
-* Build Simple Android APP
-
-Powered by [NemoSecurity](https://nemosecurity.com)
