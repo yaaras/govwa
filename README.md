@@ -48,7 +48,7 @@ go mod download
 
 go run app.go 
 
-Open this URL http://localhost:8080/ on your browser to access GoVWA
+Open this URL http://localhost:8888/ on your browser to access GoVWA
 
 ```
 Open the URL to access GoVWA and follow the setup instruction to create database and tables
