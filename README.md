@@ -15,12 +15,9 @@ Installing guide : https://www.digitalocean.com/community/tutorials/how-to-insta
 ```
 git clone https://github.com/yaaras/govwa.git
 
-inside govwa directory:
+cd govwa
+
 docker-compose up --build
-
-stop running process using
-docker-compose down --remove-orphans --volumes
-
 ```
 
 #### GoVWA config
