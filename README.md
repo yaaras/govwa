@@ -45,7 +45,7 @@ config.json file is located in config directory.
 
 #### Setup
 ```
-git clone https://github.com/0c34/govwa.git
+git clone https://github.com/yaaras/govwa.git
 
 go mod download
 
