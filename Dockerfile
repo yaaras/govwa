@@ -28,12 +28,21 @@ WORKDIR /dist
 RUN cp /app/main .
 
 # Build a small image
-FROM scratch
+FROM alpine
 
 COPY --from=builder /dist/main /
 COPY ./config/config.json /config/config.json
 COPY ./templates/* /templates/
 COPY ./public/. /public/
+
+RUN mkdir /secret
+RUN echo "Aqua{privileged_containers_are_bad}" > /secret/flag.txt
+
+#RUN ln -sf /bin/bash /bin/sh
+#RUN useradd -ms /bin/bash  newuser
+#RUN echo 'newuser:newpassword' | chpasswd
+
 EXPOSE 8888
+
 # Command to run
 CMD ["./main"]

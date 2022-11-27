@@ -1,0 +1,32 @@
+{{define "template.rce1"}} {{template "template.header" .}} {{template "template.sidebar" .}}
+
+<div class="col-md-9">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Command Injection Vulnerability</div>
+    <div class="panel-body">
+      <div class="pnl">
+
+        <p>Find the secret message</p>
+
+        <div class="well">
+          <label style="color:#428bca;font-family:Open Sans; font-weight:500">Enter Address:</label>
+          <input type="text" class="form-control" id="address" name="Address">
+          <form class="form-inline" id="form" method="POST">
+            <div class="form-group">
+
+              <input type="hidden" class="form-control" id="cmd" name="Command">
+              <input type="submit" class="btn btn-small btn-primary" id="submit" value="Ping">
+
+            </div>
+          </form>
+          <p>{{.output}}</p>
+        </div>
+        <div class="more-info">
+          <span>More Info :</span>
+          <a target="_blank" href="https://developer.chrome.com/docs/devtools/">https://developer.chrome.com/docs/devtools/</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{template "template.footer"}} {{ end }}

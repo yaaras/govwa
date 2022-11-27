@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cross Site Scripting</title>
+
+  <link href="public/css/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" type="text/css" href="public/css/open-sans.css" />
+  <link href="public/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <script type="text/javascript" src="public/js/jquery-3.2.1-min.js"></script>
+  <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+
+  <link href="public/css/main.css" rel="stylesheet">
+
+  <style>
+    .header {
+      background-image: url("public/img/header2.png");
+      width: 1140px;
+      height: 130px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="header" role="navigation">
+  </nav>
+
+  <div class="row">
+    <div class="col-sm-4 col-md-3 sidebar">
+      <div class="nav-side-menu">
+        <div class="brand"><img src="public/img/go-icon.ico">Vulnerabilities</div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list">
+
+          <ul id="menu-content" class="menu-content collapse out">
+            <li>
+              <a href="index">
+                <i class="fa fa-dashboard fa-lg"></i> Home
+              </a>
+            </li>
+
+            <li>
+              <a href="setup">
+                <i class="glyphicon glyphicon-cog fa-lg"></i> Setup/Reset
+              </a>
+            </li>
+            <li style="height:35px"></li>
+
+
+
+            <li data-toggle="collapse" data-target="#xss" class="collapsed">
+              <a href="#"><i class="fa fa-bug fa-lg"></i> Cross Site Scripting <span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" id="xss">
+              <li><a href="xss0">XSS - Demo</a></li>
+              <li><a href="xss1">XSS 1</a></li>
+              <li><a href="xss2?uid=1">XSS 2</a></li>
+            </ul>
+
+            <li data-toggle="collapse" data-target="#rce" class="collapsed">
+              <a href="#"><i class="fa fa-bug fa-lg"></i> Command Injection <span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" id="rce">
+              <li><a href="rce1">Command Injection 1</a></li>
+            </ul>
+
+            <li data-toggle="collapse" data-target="#rce" class="collapsed">
+              <a href="#"><i class="fa fa-bug fa-lg"></i> Command Injection <span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" id="rce">
+              <li><a href="{{.weburl}}rce1">Command Injection 1</a></li>
+            </ul>
+
+            <li>
+              <a href="setting">
+                <i class="glyphicon glyphicon-cog fa-lg"></i> Setting
+              </a>
+            </li>
+            <li>
+              <a href="logout">
+                <i class="fa fa-sign-out fa-lg"></i> Logout
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Cross Site Scripting Vulnerability</div>
+        <div class="panel-body">
+          <div class="pnl">
+
+            <p>The use of text template</p>
+
+            <div class="well">
+              <form method="POST">
+
+                  <label for="uname" style="color:#428bca;font-family:Open Sans; font-weight:500">Username</label>
+                  <input type="text" class="form-control" placeholder="Username" name="username">
+
+                  <label for="psw" style="color:#428bca;font-family:Open Sans; font-weight:500">Password</label>
+                  <input type="password" class="form-control" placeholder="Password" name="password">
+
+                  <input type="submit" class="btn btn-small btn-primary" value="Login">
+
+
+              </form>
+              <p></p>
+              <p></p>
+            </div>
+            <div class="more-info">
+              <span>More Info :</span>
+              <a target="_blank" href="https://excess-xss.com/">https://excess-xss.com/</a>
+              <a target="_blank" href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <span><i class="fa fa-copyright"></i>Nemosecurity</span>
+    </div>
+  </footer>
+</div>
+
+</body>
+
+</html>
+ 

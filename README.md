@@ -80,10 +80,10 @@ docker-compose down --remove-orphans --volumes
 
 GoVWA users:
 
-|uname|password|
-|-----|--------|
-|admin|govwaadmin|
-|user1|govwauser1|
+| uname | password   |
+|-------|------------|
+| admin | govwaadmin |
+| aqua  | aqua       |
 
 Explore the vulnerability.
 

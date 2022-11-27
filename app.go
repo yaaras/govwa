@@ -14,6 +14,7 @@ import (
 	"github.com/govwa/util/middleware"
 	"github.com/govwa/vulnerability/csa"
 	"github.com/govwa/vulnerability/idor"
+	"github.com/govwa/vulnerability/rce"
 	"github.com/govwa/vulnerability/sqli"
 	"github.com/govwa/vulnerability/xss"
 )
@@ -52,6 +53,7 @@ func main() {
 	sqlI := sqli.New()
 	xss := xss.New()
 	idor := idor.New()
+	rce := rce.New()
 	csa := csa.New()
 	setup := setup.New()
 	setting := setting.New()
@@ -63,6 +65,7 @@ func main() {
 	user.SetRouter(router)
 	sqlI.SetRouter(router)
 	xss.SetRouter(router)
+	rce.SetRouter(router)
 	idor.SetRouter(router)
 	csa.SetRouter(router)
 	setup.SetRouter(router)

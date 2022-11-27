@@ -16,7 +16,7 @@ const (
 		PRIMARY KEY (id)
 	  ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1`
 
-	InsertUsers = `INSERT INTO Users VALUES (1,'admin','9f3b6fa4703a5ba96fda0dee48ec76fc'),(2,'user1','ff1d5c0015a535b01a5d03a373bf06f6')`
+	InsertUsers = `INSERT INTO Users VALUES (1,'admin','9f3b6fa4703a5ba96fda0dee48ec76fc'),(2,'aqua','65cb59645b852c2394ba3ff8b295e83c')`
 
 	DropProfilesTable = `DROP TABLE IF EXISTS Profile`
 
