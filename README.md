@@ -56,7 +56,7 @@ Open the URL to access GoVWA and follow the setup instruction to create database
 
 GoVWA users:
 
-| uname | password   |
-|-------|------------|
-| aqua  | aqua       |
+| user | password   |
+|------|------------|
+| aqua | aqua       |
 
