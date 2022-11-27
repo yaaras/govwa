@@ -58,6 +58,5 @@ GoVWA users:
 
 | uname | password   |
 |-------|------------|
-| admin | govwaadmin |
 | aqua  | aqua       |
 
