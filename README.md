@@ -11,22 +11,9 @@ GoVWA is a vulnerable web application, **Run it only on local environment**
 Golang versiong : >= 1.11 
 Installing guide : https://www.digitalocean.com/community/tutorials/how-to-install-go-1-6-on-ubuntu-16-04
 
-#### Setup
-```
-git clone https://github.com/0c34/govwa.git
-
-git pull (to update)
-
-```
-#### Install dependency packages
-
-```
-go mod download 
-```
-
 #### Setup from docker
 ```
-git clone https://github.com/0c34/govwa.git
+git clone https://github.com/yaaras/govwa.git
 
 inside govwa directory:
 docker-compose up --build
@@ -54,25 +41,16 @@ config.json file is located in config directory.
 
     "sessionkey:": "G0Vw444"
 }
+```
 
+#### Setup
 ```
-Run GoVWA 
-```
+git clone https://github.com/0c34/govwa.git
+
+go mod download
+
 go run app.go 
-```
-```
 
-     ÛÛÛÛÛÛÛÛÛ           ÛÛÛÛÛ   ÛÛÛÛÛ ÛÛÛÛÛ   ÛÛÛ   ÛÛÛÛÛ   ÛÛÛÛÛÛÛÛÛ  
-    ÛÛÛ°°°°°ÛÛÛ         °°ÛÛÛ   °°ÛÛÛ °°ÛÛÛ   °ÛÛÛ  °°ÛÛÛ   ÛÛÛ°°°°°ÛÛÛ 
-   ÛÛÛ     °°°   ÛÛÛÛÛÛ  °ÛÛÛ    °ÛÛÛ  °ÛÛÛ   °ÛÛÛ   °ÛÛÛ  °ÛÛÛ    °ÛÛÛ 
-  °ÛÛÛ          ÛÛÛ°°ÛÛÛ °ÛÛÛ    °ÛÛÛ  °ÛÛÛ   °ÛÛÛ   °ÛÛÛ  °ÛÛÛÛÛÛÛÛÛÛÛ 
-  °ÛÛÛ    ÛÛÛÛÛ°ÛÛÛ °ÛÛÛ °°ÛÛÛ   ÛÛÛ   °°ÛÛÛ  ÛÛÛÛÛ  ÛÛÛ   °ÛÛÛ°°°°°ÛÛÛ 
-  °°ÛÛÛ  °°ÛÛÛ °ÛÛÛ °ÛÛÛ  °°°ÛÛÛÛÛ°     °°°ÛÛÛÛÛ°ÛÛÛÛÛ°    °ÛÛÛ    °ÛÛÛ 
-   °°ÛÛÛÛÛÛÛÛÛ °°ÛÛÛÛÛÛ     °°ÛÛÛ         °°ÛÛÛ °°ÛÛÛ      ÛÛÛÛÛ   ÛÛÛÛÛ
-     °°°°°°°°°   °°°°°°       °°°           °°°   °°°      °°°°°   °°°°° 
-
-=======
-Server running at port :8080
 Open this URL http://localhost:8080/ on your browser to access GoVWA
 
 ```
