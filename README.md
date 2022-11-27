@@ -24,6 +24,18 @@ git pull (to update)
 go mod download 
 ```
 
+#### Setup from docker
+```
+git clone https://github.com/0c34/govwa.git
+
+inside govwa directory:
+docker-compose up --build
+
+stop running process using
+docker-compose down --remove-orphans --volumes
+
+```
+
 #### GoVWA config
 ---
 #### Modified the config.json file for database configuration
@@ -60,23 +72,12 @@ go run app.go
      °°°°°°°°°   °°°°°°       °°°           °°°   °°°      °°°°°   °°°°° 
 
 =======
-Server running at port :8082
-Open this URL http://192.168.56.101:8082/ on your browser to access GoVWA
+Server running at port :8080
+Open this URL http://localhost:8080/ on your browser to access GoVWA
 
 ```
 Open the URL to access GoVWA and follow the setup instruction to create database and tables
 
-#### Setup from docker
-```
-git clone https://github.com/0c34/govwa.git
-
-inside govwa directory:
-docker-compose up --build
-
-stop running process using
-docker-compose down --remove-orphans --volumes
-
-```
 
 GoVWA users:
 
@@ -85,4 +86,3 @@ GoVWA users:
 | admin | govwaadmin |
 | aqua  | aqua       |
 
-Explore the vulnerability.
