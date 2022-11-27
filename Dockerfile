@@ -36,7 +36,7 @@ COPY ./templates/* /templates/
 COPY ./public/. /public/
 
 RUN mkdir /secret
-RUN echo "Aqua{beware_of_client_side_injections}" > /secret/flag.txt
+RUN echo "Aqua{beware_of_client_side_tampering}" > /secret/flag.txt
 
 #RUN ln -sf /bin/bash /bin/sh
 #RUN useradd -ms /bin/bash  newuser
