@@ -8,7 +8,7 @@ GoVWA is a vulnerable web application, **Run it only on local environment**
 #### Installation
 ---
 #### Installing golang
-Golang versiong : >= 1.11 
+Golang version : >= 1.11 
 Installing guide : https://www.digitalocean.com/community/tutorials/how-to-install-go-1-6-on-ubuntu-16-04
 
 #### Setup from docker
@@ -20,9 +20,21 @@ cd govwa
 docker-compose up --build
 ```
 
+#### For mac users
+
+You will need to change the value of:
+> db-mysql:
+> 
+> image: mysql:5.7
+> 
+In the file docker-compose.yml, to:
+> db-mysql:
+> 
+> image: arm64v8/mysql:8.0
+
 #### GoVWA config
 ---
-#### Modified the config.json file for database configuration
+Modified the config.json file for database configuration
 
 config.json file is located in config directory.
 
